@@ -1,8 +1,8 @@
 # Site settings
 title: Phivos Stylianides
 description: "Phivos Stylianides personal website"
-baseurl: ""  # for test: remove string '/space-jekyll-templa' to ''
-url: ""  # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https:yourusername.githu.io'
+baseurl: ""
+url: "https://stphivos.github.io"
 
 # User settings
 username: stphivos
