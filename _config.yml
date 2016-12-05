@@ -31,8 +31,8 @@ links:
     url: /
   - title: my posts
     url: /posts
-  - title: series
-    url: /series
+  # - title: series
+  #  url: /series
   - title: tags
     url: /tags
   - title: about me
@@ -40,13 +40,10 @@ links:
 
 # projects in header index
 projects:
-  - name: asciilang
-    url: https://github.com/victorvoid/asciilang
-  - name: vim-frontend
-    url: https://github.com/victorvoid/vim-frontend
-  - name: generator-capybara
-    url: https://github.com/victorvoid/generator-capybara 
+  - name: django-angular2-fullstack-devops
+    url: https://github.com/stphivos/django-angular2-fullstack-devops
+  - name: django-mock-queries
+    url: https://github.com/stphivos/django-mock-queries
 
 # exclude my node related stuff
 exclude: ['package.json', 'src', 'node_modules']
-
