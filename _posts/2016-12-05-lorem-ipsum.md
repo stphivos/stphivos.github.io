@@ -10,7 +10,7 @@ tags:
 categories:
 - Lorem ipsum
 serie: learn
-twitter_text: 'How to speak with Lorem'
+#twitter_text: 'How to speak with Lorem'
 ---
 
 ## Section
