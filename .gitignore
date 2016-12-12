@@ -4,3 +4,5 @@ node_modules
 _drafts
 .DS_Store
 .idea
+s3_website.yml
+
