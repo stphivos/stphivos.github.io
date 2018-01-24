@@ -2,7 +2,7 @@
 title: Phivos Stylianides
 description: "Phivos Stylianides personal website"
 baseurl: ""
-url: "https://stphivos.github.io"
+url: https://stphivos.github.io
 
 # User settings
 username: stphivos
@@ -27,23 +27,43 @@ compress_html:
 
 # Links to include in menu navigation
 links:
-  - title: home
-    url: /
-  - title: my posts
-    url: /posts
-  # - title: series
-  #  url: /series
-  - title: tags
-    url: /tags
-  - title: about me
-    url: /about
+  section_1:
+    - title: home
+      url: /
+      key_trigger: 1
+    - title: my posts
+      url: /posts
+      key_trigger: 2
+    # - title: series
+    #   url: /series
+    #   key_trigger: 3
+    - title: tags
+      url: /tags
+      key_trigger: 3
+    # - title: about me
+    #   url: /about
+    #   key_trigger: 5
+  section_2:
+    - title: github
+      url: http://www.github.com/stphivos
+      new_tab: true
+      key_trigger: g
+    - title: twitter
+      url: http://www.twitter.com/stphivos
+      new_tab: true
+      key_trigger: t
+    - title: search
+      url: ""
+      key_trigger: s #WARNING: search only works with "s"
 
 # projects in header index
 projects:
-  - name: django-angular2-fullstack-devops
-    url: https://github.com/stphivos/django-angular2-fullstack-devops
+  - name: bg-kube
+    url: https://github.com/stphivos/bg-kube
   - name: django-mock-queries
     url: https://github.com/stphivos/django-mock-queries
+  - name: django-angular2-fullstack-devops
+    url: https://github.com/stphivos/django-angular2-fullstack-devops
 
 # exclude my node related stuff
 exclude: ['package.json', 'src', 'node_modules']
