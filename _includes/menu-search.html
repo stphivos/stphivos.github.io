@@ -1,10 +1,11 @@
 <div class="search-wrapper">
 
-    <div class="search-form">
-        <input type="text" class="search-field" placeholder="Search...">
-        <svg class="icon-remove-sign"><use xlink:href="#icon-close"></use></svg>
-        <ul class="search-results search-list"></ul>
-    </div>
+  <div class="search-form">
+      <input arial-label="Search for a post" type="text" class="search-field" placeholder="Search...">
+      <svg class="icon-remove-sign"><use xlink:href="#icon-close"></use></svg>
+
+      <ul class="search-results search-list"></ul>
+  </div>
 
 </div>
 
@@ -17,7 +18,10 @@
 
 <aside id="sidebar">
   <div id="topmenu">
-    {% assign filename = page.url | replace_first: '/', '' | replace: '/', '-'  | replace: '.html', '.md' %}
+    {% assign filename = page.url
+                         | replace_first: '/', ''
+                         | replace: '/', '-'
+                         | replace: '.html', '.md' %}
     <ul>
       <li><span>1</span></li>
       <li><span> {{page.url}}</span></li>
@@ -32,36 +36,35 @@
     </ul>
   </div>
 
-  <nav id="navigation">
-    <ul>
-      {% assign counter=1 %}
-      {% for link in site.links %}
-      {% if link.external %}
-        <li>
-          <a href="{{ link.url }}">{{ link.title }}</a>
-        </li>
-      {% else %}
-        <li>
-          <span class="counter-menu">{{counter}}</span>
-          <svg viewBox="0 0 50 50" class="icon-arrow-menu"><use xlink:href="#icon-right-arrow"></use></svg>
-          <a href="{{ site.url }}{{ link.url }}"> {{ link.title }}</a>
-        </li>
-      {% endif %}
-
-      {% assign counter=counter | plus:1 %}   
+  <nav id="navigation" role="navigation">
+    {% for section in site.links %}
+      <ul>
+      {% for link in section[1] %}
+        {% if link.external %}
+            <li>
+                <a href="{{ link.url }}" target="_blank">{{ link.title }}</a>
+            </li>
+        {% else %}
+            <li>
+                <span class="counter-menu">{{link.key_trigger}}</span>
+                <svg viewBox="0 0 50 50" class="icon-arrow-menu">
+                    <use xlink:href="#icon-right-arrow"></use>
+                </svg>
+                {% if link.new_tab %}
+                <a key-trigger={{ link.key_trigger }}
+                    href="{{ site.url }}{{ link.url }}" target="_blank"> {{ link.title }}</a>
+                {% else %}
+                <a key-trigger={{ link.key_trigger }}
+                    href="{{ site.url }}{{ link.url }}"> {{ link.title }}</a>
+                {% endif %}
+            </li>
+        {% endif %}
       {% endfor %}
-    </ul>
-
-    <ul>
-      <li><span class="counter-menu">g</span><svg viewBox="0 0 50 50" class="icon-arrow-menu"><use xlink:href="#icon-right-arrow"></use></svg><a target="_blank" href="http://github.com/{{site.github_username}}" class="search">github</a></li>
-      <li><span class="counter-menu">s</span><svg viewBox="0 0 50 50" class="icon-arrow-menu"><use xlink:href="#icon-right-arrow"></use></svg><a class="search">search</a></li>
-      <li><span class="counter-menu">t</span><svg viewBox="0 0 50 50" class="icon-arrow-menu"><use xlink:href="#icon-right-arrow"></use></svg><a target="_blank" href="http://twitter.com/{{site.twitter_username}}">twitter</a></li>
-    </ul>
-
+      </ul>
+    {% endfor %}
   </nav>
-
 </aside>
 
 <a id="search" class="dosearch">
-    <svg class="icon-menu icon-search"><use xlink:href="#icon-search"></use></svg>
+  <svg class="icon-menu icon-search"><use xlink:href="#icon-search"></use></svg>
 </a>
