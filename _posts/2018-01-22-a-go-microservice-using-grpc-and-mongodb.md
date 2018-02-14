@@ -1,11 +1,12 @@
 ---
 layout:      post
 image:       ''
-description: 'Example layered microservice in Go, using gRPC, MongoDB and Docker.'
-title:       "A Go microservice using gRPC And MongoDB"
-categories:  blog
-tags:        microservices go grpc mongodb
+description: 'Example layered microservice in Go, using gRPC and MongoDB, packaged as a Docker container image. Explanation how to quickly access and test service with grpcc cli interface.'
+title:       "A Go microservice using gRPC and MongoDB"
+categories:  software
+tags:        go grpc protobuf mongodb docker
 date:        2018-01-22 17:00:00 +0200
+permalink:   /:title/
 ---
 
 <img src="{{ "/assets/img/2018-01-22/microservices.png"}}" alt="" style="display:block; margin: 0 auto;">
@@ -38,7 +39,7 @@ It is assumed that you already have some familiarity with `Go`. It's also helpfu
 
 <img src="{{ "/assets/img/2018-01-22/project.png"}}" alt="" height="300">
 
-The complete project source code can be downloaded from this [GitHub repo](https://github.com/stphivos/todo-api-go-grpc).
+The complete project source code can be downloaded from this [GitHub repo](https://github.com/stphivos/todo-api-go-grpc/tree/3ee83f9a2fc8ff4c63bd3c68040f41124d4ed598).
 
 ## Entry point
 

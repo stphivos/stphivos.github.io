@@ -52,6 +52,7 @@
             $.each(jsonData,function(i,entry){
                 for(var i=0;i<properties.length;i++)
                     if(entry[properties[i]] !== undefined && entry[properties[i]].toLowerCase().indexOf(str.toLowerCase()) !== -1){
+                        entry.url = entry.url.toLowerCase();
                         matches.push(entry);
                         i=properties.length;
                     }
